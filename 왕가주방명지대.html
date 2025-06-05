@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>왕가주방</title>
+
+  <!-- Font Awesome 아이콘 사용 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --main-bg: #fff8f0;
+      --accent: #ff8a65;
+      --text: #333;
+    }
+
+    body {
+      background: var(--main-bg);
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .restaurant-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .menu-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      color: var(--accent);
+    }
+
+    .info, .links {
+      margin-top: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--accent);
+      color: white;
+      margin-top: 2rem;
+    }
+.menu-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    /* 사이드 메뉴 스타일 */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+      padding: 1rem;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu.active {
+      transform: translateX(0);
+    }
+
+    .side-menu h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu li {
+      margin: 1rem 0;
+    }
+
+    .side-menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+ /* 닫기 버튼 스타일 */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .close-btn:hover {
+      color: var(--accent);
+    }
+    .mjc{
+      border-radius: 12px;
+      position: absolute;
+      top: 15px;
+      left: 7rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 오버레이 -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 사이드 메뉴 -->
+  <nav class="side-menu"  id="sideMenu">
+    <!-- 닫기 버튼 -->
+    <button class="close-btn" onclick="closeMenu()" aria-label="닫기">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <h2></h2>
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="korean.html">한식</a></li>
+      <li><a href="chinese.html">중식</a></li>
+      <li><a href="western.html">양식</a></li>
+      <li><a href="japanese.html">일식</a></li>
+    </ul>
+  </nav>
+
+  <!-- 헤더 -->
+  <header>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+    <div>
+      <a  href="index.html"><img src="mjc_2.png" alt="명전로고" width="100" class="mjc"></a>
+    </div>
+  <h1>왕가주방</h1>
+</header>
+
+<!-- 본문 -->
+<div class="container">
+  <img src="왕가주방명지대.jpg" alt="왕가주방" class="restaurant-img" />
+
+  <h2>가게 정보</h2>
+  <div class="info">
+    <p><strong>주소:</strong> 서울 서대문구 거북골로 10 1층 101호</p>
+    <p><strong>영업시간:</strong> 매일 11:30-21:30</p>
+    <p><strong>전화번호:</strong> 02-3152-8883</p>
+    <p><strong>대표메뉴:</strong> 짜장 짬뽕 및 탕수육</p>
+  </div>
+
+
+    <h2>메뉴판</h2>
+    <img src="왕가주방명지대메뉴.webp" alt="왕가주방" class="menu-img" />
+
+    <h2>블로그 후기</h2>
+    <div class="links">
+      <ul>
+        <li><a href="https://blog.naver.com/ulkeuni96/223376457382" target="_blank">블로그 후기</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 명지전문대 맛집
+  </footer>
+
+ <!-- 메뉴 토글 스크립트 -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      closeMenu();
+    });
+
+    function closeMenu() {
+      sideMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+</body>
+</html>
