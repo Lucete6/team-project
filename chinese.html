@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>중식 맛집</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="overlay" id="overlay"></div>
+
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="closeMenu()" aria-label="닫기">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="korean.html">한식</a></li>
+      <li><a href="chinese.html">중식</a></li>
+      <li><a href="western.html">양식</a></li>
+      <li><a href="japanese.html">일식</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div>
+      <a  href="index.html"><img src="mjc_2.png" alt="명전로고" width="100" class="mjc"></a>
+    </div>
+    <h1>중식</h1>
+  </header>
+
+  <section class="filter-section">
+    <h2 class="filter-title">원하는 중식 종류를 선택하세요</h2>
+    <div class="filters">
+      <button class="filter-button" data-category="all">전체</button>
+      <button class="filter-button" data-category="짜장면">짜장면</button>
+      <button class="filter-button" data-category="짬뽕">짬뽕</button>
+      <button class="filter-button" data-category="탕수육">탕수육</button>
+      <button class="filter-button" data-category="딤섬">딤섬</button>
+      <button class="filter-button" data-category="팔보채">팔보채</button>
+      <button class="filter-button" data-category="마라탕">마라탕</button>
+    </div>
+  </section>
+
+  <section class="card-container">
+
+    <div class="restaurant-card" data-category="짜장면 딤섬 탕수육 all">
+      <a href="차이나.html" class="card">
+        <img src="차이나.jpg" alt="차이나">
+        <div class="card-body">
+          <div class="card-title">차이나</div>
+          <div class="card-tags">짜장면·딤섬·탕수육</div>
+          <div class="rating">⭐️ 4.0</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 all">
+      <a href="진짜루.html" class="card">
+        <img src="진짜루.jpg" alt="진짜루">
+        <div class="card-body">
+          <div class="card-title">진짜루</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육</div>
+          <div class="rating">⭐️ 3.8</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 all">
+      <a href="짜우반점.html" class="card">
+        <img src="짜우반점.jpg" alt="짜우반점">
+        <div class="card-body">
+          <div class="card-title">짜우반점</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육</div>
+          <div class="rating">⭐️ 3.9</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짬뽕 all">
+      <a href="세아짬뽕.html" class="card">
+        <img src="세아짬뽕.jpg" alt="세아짬뽕">
+        <div class="card-body">
+          <div class="card-title">세아짬뽕</div>
+          <div class="card-tags">해물짬뽕</div>
+          <div class="rating">⭐️ 4.3</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 팔보채 all">
+      <a href="왕가주방명지대.html" class="card">
+        <img src="왕가주방명지대.jpg" alt="왕가주방 명지대">
+        <div class="card-body">
+          <div class="card-title">왕가주방 명지대</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육·팔보채</div>
+          <div class="rating">⭐️ 4.3</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="딤섬 볶음밥 all">
+      <a href="마마수제만두.html" class="card">
+        <img src="마마수제만두.png" alt="마마수제만두">
+        <div class="card-body">
+          <div class="card-title">마마수제만두</div>
+          <div class="card-tags">딤섬·볶음밥</div>
+          <div class="rating">⭐️ 4.5</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="볶음밥 all">
+      <a href="시가음양동.html" class="card">
+        <img src="시가음양동.jpg" alt="시가 (음양동)">
+        <div class="card-body">
+          <div class="card-title">시가</div>
+          <div class="card-tags">볶음밥</div>
+          <div class="rating">⭐️ 4.2</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 딤섬 팔보채 all">
+      <a href="차이몬스터.html" class="card">
+        <img src="차이몬스터.jpg" alt="차이몬스터 (응암동)">
+        <div class="card-body">
+          <div class="card-title">차이몬스터</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육·딤섬·팔보채</div>
+          <div class="rating">⭐️ 4.1</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 all">
+      <a href="민복래반점.html" class="card">
+        <img src="민복래반점.jpg" alt="민복래반점 (응암동)">
+        <div class="card-body">
+          <div class="card-title">민복래반점</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육</div>
+          <div class="rating">⭐️ 4.0</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="딤섬 탕수육 팔보채 all">
+      <a href="락희안.html" class="card">
+        <img src="락희안.jpg" alt="락희안 (가좌본점)">
+        <div class="card-body">
+          <div class="card-title">락희안</div>
+          <div class="card-tags">딤섬·탕수육·팔보채</div>
+          <div class="rating">⭐️ 4.3</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="딤섬 볶음밥 all">
+      <a href="산동만두.html" class="card">
+        <img src="산동만두.png" alt="산동만두 (남가좌동)">
+        <div class="card-body">
+          <div class="card-title">산동만두</div>
+          <div class="card-tags">딤섬·볶음밥</div>
+          <div class="rating">⭐️ 4.4</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 짬뽕 탕수육 all">
+      <a href="양밍산.html" class="card">
+        <img src="양밍산.jpg" alt="양밍산 (연희동)">
+        <div class="card-body">
+          <div class="card-title">양밍산</div>
+          <div class="card-tags">짜장면·짬뽕·탕수육</div>
+          <div class="rating">⭐️ 4.5</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 볶음밥 all">
+      <a href="성호각.html" class="card">
+        <img src="성호각.jpg" alt="성호각 (연희동)">
+        <div class="card-body">
+          <div class="card-title">성호각</div>
+          <div class="card-tags">짜장면·볶음밥</div>
+          <div class="rating">⭐️ 4.3</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="짜장면 딤섬 all">
+      <a href="일화성.html" class="card">
+        <img src="일화성.jpg" alt="일화성 (연희동)">
+        <div class="card-body">
+          <div class="card-title">일화성</div>
+          <div class="card-tags">짜장면·딤섬</div>
+          <div class="rating">⭐️ 4.2</div>
+          <button>자세히 보기</button>
+        </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="마라탕 all">
+        <a href="마라왕.html" class="card">
+          <img src="마라왕.webp" alt="마라왕">
+          <div class="card-body">
+            <div class="card-title">마라왕</div>
+            <div class="card-tags">중식</div>
+            <div class="rating">⭐️ 4.2</div>
+            <button>자세히 보기</button>
+          </div>
+        </a>
+    </div>
+
+    <div class="restaurant-card" data-category="마라탕 all">
+        <a href="성연마라탕.html" class="card">
+          <img src="성연마라탕.jpg" alt="성연마라탕">
+          <div class="card-body">
+            <div class="card-title">성연마라탕</div>
+            <div class="card-tags">중식</div>
+            <div class="rating">⭐️ 4.2</div>
+            <button>자세히 보기</button>
+          </div>
+        </a>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 명지대 맛집 지도. All rights reserved.
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      closeMenu();
+    });
+
+    function closeMenu() {
+      sideMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const restaurantCards = document.querySelectorAll('.restaurant-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedCategory = button.dataset.category;
+
+        restaurantCards.forEach(card => {
+          const cardCategory = card.dataset.category;
+          if (cardCategory.includes(selectedCategory) || selectedCategory === 'all') {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

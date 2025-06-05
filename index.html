@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>명지전문대 맛집</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --main-bg: #fff8f0;
+      --accent: #ff8a65;
+      --text: #333;
+      --card-bg: #fff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: #ffe7db;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .category-card {
+      width: 300px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .category-card h3 {
+      margin: 1rem 0;
+      color: var(--accent);
+    }
+
+    footer {
+      background-color: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #mjc_index{
+      margin-right: 70px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="mjc_2.png" alt="명전로고" width="100" id="mjc_index">
+    <h1>명지전문대 맛집</h1>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="korean.html">한식</a>
+      <a href="chinese.html">중식</a>
+      <a href="western.html">양식</a>
+      <a href="japanese.html">일식</a> <!-- 일식 메뉴 추가 -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>명지전문대 주변 맛집을 소개합니다</h2>
+  </section>
+
+  <section class="category-container">
+    <a href="korean.html" class="category-card">
+      <img src="한식.jpeg" alt="한식 요리 사진" />
+      <h3>한식 맛집</h3>
+    </a>
+
+    <a href="chinese.html" class="category-card">
+      <img src="중식.jpg" alt="중식 요리 사진" />
+      <h3>중식 맛집</h3>
+    </a>
+
+    <a href="western.html" class="category-card">
+      <img src="양식.jpeg" alt="양식 요리 사진" />
+      <h3>양식 맛집</h3>
+    </a>
+
+    <a href="japanese.html" class="category-card"> 
+      <img src="일식.jpeg" alt="일식 요리 사진" />
+      <h3>일식 맛집</h3>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 명지전문대 맛집. All rights reserved.
+  </footer>
+
+</body>
+</html>

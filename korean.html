@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한식 맛집</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- 오버레이 -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 사이드 메뉴 -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="closeMenu()" aria-label="닫기">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2></h2>
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="korean.html">한식</a></li>
+      <li><a href="chinese.html">중식</a></li>
+      <li><a href="western.html">양식</a></li>
+      <li><a href="japanese.html">일식</a></li>
+    </ul>
+  </nav>
+
+  <!-- 헤더 -->
+  <header>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div>
+      <a  href="index.html"><img src="mjc_2.png" alt="명전로고" width="100" class="mjc"></a>
+    </div>
+    <h1>한식 </h1>
+  </header>
+
+  <!-- 필터 섹션 -->
+  <section class="filter-section">
+  <h2 class="filter-title">원하는 한식 종류를 선택하세요</h2>
+  <div class="filters">
+  <label><input type="checkbox" value="밥"><span>밥</span></label>
+  <label><input type="checkbox" value="찌개"><span>찌개</span></label>
+  <label><input type="checkbox" value="고기"><span>고기</span></label>
+  <label><input type="checkbox" value="분식"><span>분식</span></label>
+  <label><input type="checkbox" value="국밥"><span>국밥</span></label>
+  <label><input type="checkbox" value="전골"><span>전골</span></label>
+  <label><input type="checkbox" value="전"><span>전</span></label>
+  <label><input type="checkbox" value="면류"><span>면류</span></label>
+  <label><input type="checkbox" value="찜"><span>찜</span></label>
+</div>
+</section>
+
+  <!-- 카드 리스트 -->
+  <section class="card-container">
+  <a href="모래내곱창.html" class="card">
+    <img src="모래내곱창.png" alt="모래내곱창">
+    <div class="card-body">
+      <div class="card-title">모래내곱창</div>
+      <div class="card-tags">한식</div>
+      <div class="rating">⭐️ 4.4</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="부안식당.html" class="card">
+    <img src="부안식당.jpeg" alt="부안식당">
+    <div class="card-body">
+      <div class="card-title">부안식당</div>
+      <div class="card-tags">한식 · 백반</div>
+      <div class="rating">⭐️ 4.6</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="장수촌.html" class="card">
+    <img src="장수촌.jpeg" alt="장수촌">
+    <div class="card-body">
+      <div class="card-title">장수촌</div>
+      <div class="card-tags">한식 · 고기</div>
+      <div class="rating">⭐️ 4.2</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="홍두깨.html" class="card">
+    <img src="홍두깨.jpeg" alt="홍두깨손칼국수 수제돈까스">
+    <div class="card-body">
+      <div class="card-title">홍두깨손칼국수 수제돈까스</div>
+      <div class="card-tags">한식 · 면</div>
+      <div class="rating">⭐️ 4.3</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="군산식당.html" class="card">
+    <img src="군산식당.jpeg" alt="군산식당">
+    <div class="card-body">
+      <div class="card-title">군산식당</div>
+      <div class="card-tags">한식 · 백반</div>
+      <div class="rating">⭐️ 4.8</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="등촌.html" class="card">
+    <img src="등촌.jpeg" alt="등촌샤브칼국수 명지대점">
+    <div class="card-body">
+      <div class="card-title">등촌샤브칼국수</div>
+      <div class="card-tags">한식 · 면</div>
+      <div class="rating">⭐️ 4.4</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="통큰.html" class="card">
+    <img src="통큰.jpeg" alt="통큰한식부페">
+    <div class="card-body">
+      <div class="card-title">통큰</div>
+      <div class="card-tags">한식 · 뷔페</div>
+      <div class="rating">⭐️ 4.5</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="닭발상점.html" class="card">
+    <img src="닭발상점.jpeg" alt="닭발상점 명지대점">
+    <div class="card-body">
+      <div class="card-title">닭발상점 명지대점</div>
+      <div class="card-tags">한식 · 야식</div> 
+      <div class="rating">⭐️ 4.3</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="다래칼국수.html" class="card">
+    <img src="다래칼국수.jpeg" alt="다래칼국수">
+    <div class="card-body">
+      <div class="card-title">다래칼국수</div>
+      <div class="card-tags">한식 · 면</div>
+      <div class="rating">⭐️ 4.6</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="왕십리곱창.html" class="card">
+    <img src="왕십리곱창.jpeg" alt="왕십리곱창">
+    <div class="card-body">
+      <div class="card-title">왕십리곱창</div>
+      <div class="card-tags">한식 · 야식</div>
+      <div class="rating">⭐️ 4.5</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="불맛감자국.html" class="card">
+    <img src="불맛.jpeg" alt="불맛감자국">
+    <div class="card-body">
+      <div class="card-title">불맛감자국</div>
+      <div class="card-tags">한식 · 탕</div>
+      <div class="rating">⭐️ 4.3</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="베가보쌈.html" class="card">
+    <img src="베가보쌈.jpeg" alt="베가보쌈">
+    <div class="card-body">
+      <div class="card-title">베가보쌈</div>
+      <div class="card-tags">한식 · 고기</div>
+      <div class="rating">⭐️ 4.4</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+
+  <a href="보리향기.html" class="card">
+    <img src="보리향기.jpeg" alt="보리향기">
+    <div class="card-body">
+      <div class="card-title">보리향기</div>
+      <div class="card-tags">한식 · 밥</div>
+      <div class="rating">⭐️ 4.5</div>
+      <button>자세히 보기</button>
+    </div>
+  </a>
+  <!-- 더 많은 항목은 이어서 추가 가능합니다 -->
+</section>
+
+
+
+  <!-- 푸터 -->
+  <footer>
+    © 명지전문대 주변 한식 맛집 리스트. All rights reserved.
+  </footer>
+
+  <!-- 메뉴 토글 스크립트 -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      closeMenu();
+    });
+
+    function closeMenu() {
+      sideMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+
+</body>
+</html> 

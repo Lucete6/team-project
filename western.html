@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>양식 맛집</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="overlay" id="overlay"></div>
+
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="closeMenu()" aria-label="닫기">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2></h2>
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="korean.html">한식</a></li>
+      <li><a href="chinese.html">중식</a></li>
+      <li><a href="western.html">양식</a></li>
+      <li><a href="japanese.html">일식</a></li>
+    </ul>
+  </nav>
+  <header>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div>
+      <a  href="index.html"><img src="mjc_2.png" alt="명전로고" width="100" class="mjc"></a>
+    </div>
+    <h1>양식</h1>
+  </header>
+  
+  <!-- 필터 섹션 -->
+  <section class="filter-section">
+  <h2 class="filter-title">원하는 양식 종류를 선택하세요</h2>
+  <div class="filters">
+    <button class="filter-button" data-category="all">전체</button>
+    <button class="filter-button" data-category="파스타">파스타</button>
+    <button class="filter-button" data-category="스테이크">스테이크</button>
+    <button class="filter-button" data-category="피자">피자</button>
+    <button class="filter-button" data-category="감바스">감바스</button>
+    <button class="filter-button" data-category="브리또">브리또</button>
+    <button class="filter-button" data-category="필라프">필라프</button>
+</div>
+</section>
+  <section class="card-container">
+    <div class="restaurant-card" data-category="파스타 감바스 스테이크 all">
+      <a href="플러버.html" class="card">
+        <img src="플러버.jpg" alt="모래내곱창">
+        <div class="card-body">
+          <div class="card-title">플러버 </div>
+          <div class="card-tags">양식 </div>
+          <div class="rating">⭐️ 4.5</div>
+          <button >자세히 보기</button>
+           </div>
+          </a>
+    </div>
+
+    <div class="restaurant-card" data-category="파스타 all">
+      <a href="주인백파스타.html" class="card">
+        <img src="주인백파스타.jpg" alt="주인백 ">
+        <div class="card-body">
+          <div class="card-title">주인백 파스타  </div>
+          <div class="card-tags">양식 </div>
+          <div class="rating">⭐️ 4.7</div>
+          <button>자세히 보기</button> </div>
+            </a>
+    </div>
+      
+    <div class="restaurant-card" data-category="파스타 피자 all">
+      <a href="쏘렌토.html" class="card">
+        <img src="쏘렌토.jpg" alt="쏘렌토 ">
+        <div class="card-body">
+          <div class="card-title">쏘렌토 </div>
+          <div class="card-tags">양식 </div>
+          <div class="rating">⭐️ 4.5</div>
+          <button>자세히 보기</button>
+        </div>
+        </a>
+    </div>
+
+    <div class="restaurant-card" data-category="브리또 all">
+      <a href="리코브리또.html" class="card">
+      <img src="리코브리또.jpg" alt="텍사스">
+      <div class="card-body">
+        <div class="card-title">리코브리또 </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.6</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="all">
+      <a href="텍사스바베큐.html" class="card">
+      <img src="텍사스바베큐.png" alt="텍사스  ">
+      <div class="card-body">
+        <div class="card-title">텍사스바베큐  </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.3</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="스테이크 파스타 필라프 all">
+      <a href="리코.html" class="card">
+      <img src="리코.png" alt="텍사스  ">
+      <div class="card-body">
+        <div class="card-title">리코  </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.5</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="스테이크 파스타 필라프 all">
+      <a href="밀.HTML" class="card">
+      <img src="밀.png" alt="텍사스  ">
+      <div class="card-body">
+        <div class="card-title">밀 </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.7</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="파스타 all">
+      <a href="꾸오레베로.html" class="card">
+      <img src="꾸에로베로.jpg" alt="꾸오레베로 ">
+      <div class="card-body">
+        <div class="card-title">꾸오레베로  </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.5</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="브리또 all">
+      <a href="타코볼볼.html" class="card">
+      <img src="타코볼볼.jpg" alt="타코볼볼 ">
+      <div class="card-body">
+        <div class="card-title">타코볼볼   </div>
+        <div class="card-tags">양식,멕시칸 </div>
+        <div class="rating">⭐️ 4.5</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="restaurant-card" data-category="파스타 all">
+      <a href="룸서비스.html" class="card">
+      <img src="룸서비스.jpg" alt="룸서비스 ">
+      <div class="card-body">
+        <div class="card-title">룸서비스 </div>
+        <div class="card-tags">양식 </div>
+        <div class="rating">⭐️ 4.3</div>
+        <button>자세히 보기</button>
+      </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 명지대 맛집 지도. All rights reserved.
+  </footer>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      closeMenu();
+    });
+
+    function closeMenu() {
+      sideMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+  <script>
+    // 모든 버튼과 식당 요소를 가져옵니다.
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const restaurantCards = document.querySelectorAll('.restaurant-card');
+
+  // 버튼 클릭 이벤트 등록
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedCategory = button.dataset.category;
+
+      restaurantCards.forEach(card => {
+        const cardCategory = card.dataset.category;
+        // 선택된 카테고리와 카드의 카테고리가 일치하면 표시, 아니면 숨김
+        if (cardCategory.includes(selectedCategory)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

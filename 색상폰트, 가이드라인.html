@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>색상 및 스타일 가이드라인</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        :root {
+            /* 색상 변수 */
+            --primary-color: #b67e4a;
+            --secondary-color: #bd9e78;
+            --accent-color: #d4772a;
+            --background-color: #ebe0d4;
+            --text-color: #212529;
+
+            /* 추가 상태 색상 */
+            --success-color: #9ad255;
+            --warning-color: #ffd24c;
+            --danger-color: #dc3545;
+            --info-color: #0dcaf0;
+
+            /* 회색 계열 */
+            --gray-light: #e9ecef;
+            --gray-medium: #adb5bd;
+            --gray-dark: #495057;
+
+            /* 폰트 관련 변수 */
+            --font-family-base: 'Pretendard', Arial, sans-serif;
+            --font-family-h:"Do Hyeon", sans-serif;
+            --font-size-base: 16px;
+            --font-weight-normal: 400;
+            --font-weight-bold: 700;
+
+            /* 여백(Spacing) 변수 */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+
+            /* 테두리 반경 */
+            --border-radius: 8px;
+
+            /* 박스 그림자 */
+            --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --box-shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-family-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-normal);
+            margin: 0;
+            padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
+        }
+
+        h1 {
+            font-family: var(--font-family-h);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        h2 {
+            font-family: var(--font-family-h);
+            font-weight: var(--font-weight-bold);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+        }
+
+        section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-sample {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
+
+        .color-box {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: var(--font-weight-bold);
+            font-size: 1.1rem;
+            box-shadow: var(--box-shadow-light);
+            text-align: center;
+            user-select: none;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* 색상별 배경 */
+        .primary { background-color: var(--primary-color); }
+        .secondary { background-color: var(--secondary-color); }
+        .accent { background-color: var(--accent-color); color: #333; }
+        .background { background-color: var(--background-color); color: #333; border: 1px solid var(--gray-medium); }
+        .text { background-color: var(--text-color); }
+        .success { background-color: var(--success-color); }
+        .warning { background-color: var(--warning-color); color: #333; }
+        .danger { background-color: var(--danger-color); }
+        .info { background-color: var(--info-color); }
+
+        /* 설명 텍스트 */
+        .color-description {
+            font-size: 0.85rem;
+            color: var(--gray-dark);
+            text-align: center;
+            line-height: 1.3;
+            user-select: none;
+        }
+
+        /* 버튼 스타일 예시 */
+        .button-group {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+        button {
+            border: none;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-weight: var(--font-weight-bold);
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: var(--box-shadow-light);
+            transition: box-shadow 0.2s ease;
+            color: #fff;
+            margin-bottom: var(--spacing-xs);
+        }
+        button:focus { outline: 2px solid var(--primary-color); }
+        button:hover { box-shadow: var(--box-shadow-strong); }
+        .btn-primary { background-color: var(--primary-color); }
+        .btn-secondary { background-color: var(--secondary-color); }
+        .btn-accent { background-color: var(--accent-color); color: #333; }
+        .btn-success { background-color: var(--success-color); }
+        .btn-warning { background-color: var(--warning-color); color: #333; }
+        .btn-danger { background-color: var(--danger-color); }
+        .btn-info { background-color: var(--info-color); }
+
+        /* 예시 텍스트 박스 */
+        .text-box {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-light);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+            max-width: 600px;
+        }
+
+        ul {
+            margin-top: var(--spacing-md);
+            margin-bottom: 0;
+            padding-left: var(--spacing-lg);
+        }
+        li {
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.7;
+        }
+
+        /* 반응형 개선 */
+        @media (max-width: 700px) {
+            .color-sample {
+                gap: var(--spacing-md);
+            }
+            .color-item {
+                width: 90px;
+            }
+            .color-box {
+                width: 90px;
+                height: 90px;
+                font-size: 0.95rem;
+            }
+            body {
+                padding: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1><code style="font-family: Do Hyeon, sans-serif;">[자유로운 사람들]</code>의 색상 및 스타일 가이드라인</h1>
+    <p style="margin-bottom:var(--spacing-xl)">
+        아래는 프로젝트 과제를 위해 선정한 색상과 스타일 변수 예시입니다.<br>
+        CSS 변수와 <code>var()</code>를 활용하여 디자인 통일성을 유지하세요.
+    </p>
+
+    <section>
+        <h2>색상 팔레트</h2>
+        <div>
+            <div class="color-sample">
+                <div class="color-item">
+                    <div class="color-box primary">주 색상</div>
+                    <p class="color-description">주로 브랜드 아이덴티티를 나타내는 핵심 색상입니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box secondary">보조 색상</div>
+                    <p class="color-description">주 색상을 보완하며, 강조를 돕는 색상입니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box accent">강조 색상</div>
+                    <p class="color-description">특별한 강조나 알림에 사용하는 눈에 띄는 색상입니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box background" style="color:#212529;">배경 색상</div>
+                    <p class="color-description">페이지나 컴포넌트의 배경에 주로 사용되는 색상입니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box text">텍스트 색상</div>
+                    <p class="color-description">본문 텍스트에 사용되는 기본 색상입니다.</p>
+                </div>
+            </div>
+            <div class="color-sample">
+                <div class="color-item">
+                    <div class="color-box success">성공 색상</div>
+                    <p class="color-description">성공 메시지나 긍정적인 상태를 나타냅니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box warning" style="color:#212529;">경고 색상</div>
+                    <p class="color-description">주의가 필요한 경고 메시지에 사용합니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box danger">위험 색상</div>
+                    <p class="color-description">오류나 위험 상태를 나타내는 색상입니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box info">정보 색상</div>
+                    <p class="color-description">정보 제공용 메시지에 사용됩니다.</p>
+                </div>
+            </div>
+            <div class="color-sample">
+                <div class="color-item">
+                    <div class="color-box" style="background-color: var(--gray-light); color:#212529;">회색 라이트</div>
+                    <p class="color-description">밝은 회색으로 배경이나 구분선에 적합합니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background-color: var(--gray-medium); color:#fff;">회색 미디엄</div>
+                    <p class="color-description">중간 톤 회색으로 텍스트나 아이콘에 사용합니다.</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background-color: var(--gray-dark); color:#fff;">회색 다크</div>
+                    <p class="color-description">어두운 회색으로 강조 텍스트나 배경에 활용됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>버튼 스타일 예시</h2>
+        <div class="button-group" aria-label="색상별 버튼 그룹 1">
+            <button class="btn-primary" type="button">주 색상 버튼</button>
+            <button class="btn-secondary" type="button">보조 색상 버튼</button>
+            <button class="btn-accent" type="button">강조 색상 버튼</button>
+        </div>
+        <div class="button-group" aria-label="색상별 버튼 그룹 2">
+            <button class="btn-success" type="button">성공 버튼</button>
+            <button class="btn-warning" type="button">경고 버튼</button>
+            <button class="btn-danger" type="button">위험 버튼</button>
+            <button class="btn-info" type="button">정보 버튼</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>스타일 가이드 변수 예시</h2>
+        <div class="text-box">
+            <p>이 텍스트 박스는 <code>--border-radius</code>, <code>--box-shadow-light</code>, <code>--spacing-lg</code> 변수를 사용해 스타일링 되었습니다.</p>
+            <p>폰트는 <code>--font-family-base,--font-family-h</code>, 크기와 두께는 <code>--font-size-base</code>, <code>--font-weight-normal</code> 및 <code>--font-weight-bold</code> 변수를 활용합니다.</p>
+        </div>
+    </section>
+</body>
+
+</html>
